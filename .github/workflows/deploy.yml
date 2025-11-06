@@ -15,7 +15,29 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+      - run: npm ci
+      # Build once, then test the built app (fast + production-like)
+      - run: npm run build
+      # Run Cypress against the built app served locally
+      - name: Cypress run (against preview)
+        uses: cypress-io/github-action@v6
+        with:
+          install: false
+          start: npm run preview
+          wait-on: "http://localhost:4173"
+          config: baseUrl=http://localhost:4173
+          browser: chrome # or remove to use Electron
+
   build:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
