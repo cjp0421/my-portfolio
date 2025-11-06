@@ -1,4 +1,4 @@
-import { CAPABILITIES } from "./capabilities"
+import { Capabilities } from "./components/Capabilities"
 import { Hero } from "./components/Hero"
 
 
@@ -6,21 +6,7 @@ function App() {
   return (
     <main>
       <Hero/>
-
-    <section>
-      <p>Connecting development, data, product, and writing</p>
-    </section>
-
-      <section>
-        <h2>Capabilities</h2>
-      <ul>
-        {CAPABILITIES.map(ability => (
-          <li key={ability.id}>
-            <strong>{ability.title}</strong> - {ability.blurb}
-          </li>
-        ))}
-      </ul>
-      </section>
+      <Capabilities/>
       <section>
         <h2>Projects</h2>
         <ul>
