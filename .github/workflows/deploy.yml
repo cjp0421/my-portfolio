@@ -32,8 +32,8 @@ jobs:
         with:
           install: false
           start: npm run preview
-          wait-on: "http://localhost:4173"
-          config: baseUrl=http://localhost:4173
+          wait-on: "http://localhost:5173"
+          config: baseUrl=http://localhost:5173
           browser: chrome # or remove to use Electron
 
   build:
