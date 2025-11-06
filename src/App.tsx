@@ -1,5 +1,6 @@
 import { Capabilities } from "./components/Capabilities"
 import { Hero } from "./components/Hero"
+import { Projects } from "./components/Projects"
 
 
 function App() {
@@ -7,17 +8,7 @@ function App() {
     <main>
       <Hero/>
       <Capabilities/>
-      <section>
-        <h2>Projects</h2>
-        <ul>
-          <li>Project Name</li>
-              <ul>
-               <li>Project Summary</li>
-               <li>stack badges</li>
-               <li><a href="#" target="_blank">github/demo link</a></li>
-              </ul>
-        </ul>
-      </section>
+      <Projects/>
       <section>
         <h2>Contact Me</h2>
         <p>Let's talk about thoughtful systems, learning, or product design.</p>
