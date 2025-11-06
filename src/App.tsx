@@ -1,13 +1,11 @@
 import { CAPABILITIES } from "./capabilities"
+import { Hero } from "./components/Hero"
 
 
 function App() {
   return (
     <main>
-      <section>
-        <h1>Carol Pedersen - Portfolio</h1>
-        <p>(developer · product thinker · educator)</p>
-      </section>
+      <Hero/>
 
     <section>
       <p>Connecting development, data, product, and writing</p>
