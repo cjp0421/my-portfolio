@@ -1,4 +1,5 @@
 import { Box, Typography, Container } from '@mui/material';
+import './Hero.css';
 
 export function Hero() {
   return (
@@ -18,7 +19,8 @@ export function Hero() {
         <Typography
           variant="h1"
           align="center"
-          sx={{ mb: 3, color: 'text.primary' }}
+          className="neon-text"
+          sx={{ mb: 3 }}
         >
           Carol Pedersen
         </Typography>
