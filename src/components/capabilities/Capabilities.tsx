@@ -1,13 +1,19 @@
 import { Box, Container, Typography, Card, CardContent } from '@mui/material';
 import Grid from '@mui/material/Grid';
+import "./Capabilities.css";
 
-import { CAPABILITIES } from '../capabilities';
+import { CAPABILITIES } from './capabilities';
 
 export function Capabilities() {
   return (
     <Box component="section" sx={{ px: 3, py: 10 }}>
       <Container maxWidth="lg">
-        <Typography variant="h2" align="center" sx={{ mb: 6, color: 'text.primary' }}>
+        <Typography 
+          variant="h2" 
+          align="center" 
+          className='neon-blue'
+          sx={{ mb: 6 }}
+          >
           Capabilities
         </Typography>
         <Grid container spacing={3}>
@@ -30,11 +36,16 @@ export function Capabilities() {
                   variant="outlined"
                 >
                   <CardContent>
-                    <Icon sx={{ fontSize: 40, color: 'primary.main', mb: 2 }} />
-                    <Typography variant="h6" component="h3" gutterBottom>
-                      {capability.title}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
+                    <Box sx={{
+                      display: "flex",
+                      mb: 2
+                    }}>
+                      <Icon className="neon-blue-icon" sx={{ fontSize: 40, mx: 2 }} />
+                      <Typography variant="h6" component="h3" gutterBottom>
+                        {capability.title}
+                      </Typography>
+                    </Box>
+                    <Typography variant="body2" color="text.secondary" sx={{ ml: 3.5, mr: 2.5 }}>
                       {capability.blurb}
                     </Typography>
                   </CardContent>
