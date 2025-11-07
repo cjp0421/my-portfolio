@@ -41,7 +41,9 @@ export function Capabilities() {
                       mb: 2
                     }}>
                       <Icon className="neon-blue-icon" sx={{ fontSize: 40, mx: 2 }} />
-                      <Typography variant="h6" component="h3" gutterBottom>
+                      <Typography variant="h6" component="h3" gutterBottom sx={{
+                        mt: .5
+                      }}>
                         {capability.title}
                       </Typography>
                     </Box>
