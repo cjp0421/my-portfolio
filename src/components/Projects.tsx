@@ -22,6 +22,12 @@ const projects = [
     githubUrl: "https://github.com/cjp0421/aiAgent",
   },
   {
+    name: "Certified Scrum Product Owner®",
+    description: "This badge demonstrates my completion of the CSPO certification course.",
+    stack: ["Agile", "Product Management", "Backlog Management", "Product Discovery"],
+    demoUrl: "https://bcert.me/bc/html/show-badge.html?b=jhsyfbrl"
+  },
+  {
     name: "Getting Started with Google Classroom",
     description: "This technical document is designed to be used by K-12 educators. It outlines the first four steps of setting up a Google Classroom for students.",
     stack: ["HTML/CSS", "Video Creation", "Technical Writing", "Training"],
