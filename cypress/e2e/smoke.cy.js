@@ -4,6 +4,5 @@ describe('Portfolio site', () => {
         cy.visit('http://localhost:5173')
         cy.contains('Carol Pedersen').should('be.visible')
     })
-    it('dances with wolves', ()=>{})
 })
 
