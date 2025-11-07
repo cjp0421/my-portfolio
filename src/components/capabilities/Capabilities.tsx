@@ -2,7 +2,7 @@ import { Box, Container, Typography, Card, CardContent } from '@mui/material';
 import Grid from '@mui/material/Grid';
 import "./Capabilities.css";
 
-import { CAPABILITIES } from './capabilities';
+import { CAPABILITIES } from './capabilities_data';
 
 export function Capabilities() {
   return (
