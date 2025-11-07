@@ -34,7 +34,7 @@ export function Hero() {
         <Typography
           variant="h6"
           align="center"
-          sx={{ color: 'text.primary', maxWidth: '800px', mx: 'auto', fontSize: '18px' }}
+          sx={{ color: 'text.secondary', maxWidth: '800px', mx: 'auto', fontSize: '18px' }}
         >
           Building systems and stories that empower people and deliver results.
         </Typography>
