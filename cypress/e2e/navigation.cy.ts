@@ -7,13 +7,13 @@ describe('AppBar navigation', () => {
         cy.get('header')
           .should('be.visible')
           .and('have.css', 'position')
-          .and('match', /sticky|fixed/);
+          .and('match', /static/);
 
         cy.contains('Capabilities').click();
 
-        cy.url().should('include', '#capabilities');
+        cy.url().should('include', '#Capabilities');
 
-        cy.get('#capabilities').should('be.visible');
+        cy.get('#Capabilities').should('be.visible');
 
         cy.get('header').should('be.visible');
     })
