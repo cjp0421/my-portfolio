@@ -6,7 +6,7 @@
                0 0 20px #ff005e,
                0 0 40px #ff005e,
                0 0 80px #ff005e;
-  animation: glow 2.5s infinite alternate;
+  animation: glow 5s infinite alternate;
 }
 
 @keyframes glow {
