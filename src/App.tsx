@@ -1,8 +1,8 @@
 import { AppBar, Box, Button, IconButton, Toolbar, Typography } from "@mui/material"
 import { Capabilities } from "./components/capabilities/Capabilities"
-import { Contact } from "./components/Contact"
+import { Contact } from "./components/contact/Contact"
 import { Hero } from "./components/hero/Hero"
-import { Projects } from "./components/Projects"
+import { Projects } from "./components/projects/Projects"
 import MenuIcon from '@mui/icons-material/Menu';
 
 const navItems = ['Home', 'Capabilities', 'Projects', 'Contact'];

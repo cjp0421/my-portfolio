@@ -1,0 +1,36 @@
+.neon-emerald {
+  color: #b6ffd6; /* lightened text for contrast */
+  text-shadow:
+    0 0 4px rgba(0, 128, 64, 0.6),
+    0 0 8px rgba(0, 128, 64, 0.5),
+    0 0 16px rgba(0, 200, 100, 0.4);
+  filter:
+    drop-shadow(0 0 3px rgba(0, 128, 64, 0.6))
+    drop-shadow(0 0 6px rgba(0, 200, 100, 0.5))
+    drop-shadow(0 0 12px rgba(0, 255, 150, 0.4));
+  animation: glowEmerald 3s infinite alternate;
+  will-change: text-shadow, filter;
+}
+
+@keyframes glowEmerald {
+  0% {
+    text-shadow:
+      0 0 4px rgba(0, 128, 64, 0.6),
+      0 0 8px rgba(0, 128, 64, 0.5),
+      0 0 16px rgba(0, 200, 100, 0.4);
+    filter:
+      drop-shadow(0 0 3px rgba(0, 128, 64, 0.6))
+      drop-shadow(0 0 6px rgba(0, 200, 100, 0.5))
+      drop-shadow(0 0 12px rgba(0, 255, 150, 0.4));
+  }
+  100% {
+    text-shadow:
+      0 0 6px rgba(0, 180, 90, 0.7),
+      0 0 12px rgba(0, 220, 120, 0.6),
+      0 0 24px rgba(0, 255, 170, 0.5);
+    filter:
+      drop-shadow(0 0 4px rgba(0, 180, 90, 0.7))
+      drop-shadow(0 0 8px rgba(0, 220, 120, 0.6))
+      drop-shadow(0 0 16px rgba(0, 255, 170, 0.5));
+  }
+}

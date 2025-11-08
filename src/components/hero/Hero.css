@@ -1,27 +1,50 @@
 .neon-text {
   font-size: 4rem;
   color: #fff;
-  text-shadow: 0 0 5px #ff005e,
-               0 0 10px #ff005e,
-               0 0 20px #ff005e,
-               0 0 40px #ff005e,
-               0 0 80px #ff005e;
-  animation: glow 5s infinite alternate;
+  text-shadow:
+    0 0 5px #ff005e,
+    0 0 10px #ff005e,
+    0 0 20px #ff005e,
+    0 0 40px #ff005e,
+    0 0 80px #ff005e;
+  animation: glow 12s infinite alternate;
+  will-change: text-shadow;
 }
 
 @keyframes glow {
   0% {
-    text-shadow: 0 0 5px #ff005e,
-                 0 0 10px #ff005e,
-                 0 0 20px #ff005e,
-                 0 0 40px #ff005e,
-                 0 0 80px #ff005e;
+    text-shadow:
+      0 0 5px #ff005e,
+      0 0 10px #ff005e,
+      0 0 20px #ff005e,
+      0 0 40px #ff005e,
+      0 0 80px #ff005e;
   }
+
+  33% {
+    text-shadow:
+      0 0 10px #00d4ff,
+      0 0 20px #00d4ff,
+      0 0 40px #00d4ff,
+      0 0 80px #00d4ff,
+      0 0 160px #00d4ff;
+  }
+
+  66% {
+    text-shadow:
+      0 0 5px #bb6eff,
+      0 0 10px #bb6eff,
+      0 0 20px #bb6eff,
+      0 0 40px #bb6eff,
+      0 0 80px #bb6eff;
+  }
+
   100% {
-    text-shadow: 0 0 10px #00d4ff,
-                 0 0 20px #00d4ff,
-                 0 0 40px #00d4ff,
-                 0 0 80px #00d4ff,
-                 0 0 160px #00d4ff;
+    text-shadow:
+      0 0 6px rgba(0, 128, 64, 0.8),
+      0 0 12px rgba(0, 180, 90, 0.7),
+      0 0 24px rgba(0, 220, 120, 0.6),
+      0 0 48px rgba(0, 255, 170, 0.5),
+      0 0 96px rgba(0, 255, 170, 0.4);
   }
 }

@@ -1,0 +1,62 @@
+.neon-purple {
+  color: #fff;
+  text-shadow: 0 0 3px #bb6eff, 0 0 6px #bb6eff, 0 0 12px #bb6eff;
+  filter: drop-shadow(0 0 2px #bb6eff)
+          drop-shadow(0 0 4px #bb6eff)
+          drop-shadow(0 0 8px #bb6eff);
+  animation: glowPurple 10s infinite alternate;
+  will-change: text-shadow, filter;
+}
+
+@keyframes glowPurple {
+  0% {
+    text-shadow: 0 0 3px #bb6eff, 0 0 6px #bb6eff, 0 0 12px #bb6eff;
+    filter: drop-shadow(0 0 2px #bb6eff)
+            drop-shadow(0 0 4px #bb6eff)
+            drop-shadow(0 0 8px #bb6eff);
+  }
+  100% {
+    text-shadow: 0 0 5px #d9aaff, 0 0 10px #d9aaff, 0 0 20px #d9aaff;
+    filter: drop-shadow(0 0 3px #d9aaff)
+            drop-shadow(0 0 6px #d9aaffc1)
+            drop-shadow(0 0 12px #d9aaffd6);
+  }
+}
+
+.neon-purple-soft {
+  color: inherit;
+  text-shadow:
+    0 0 1px rgba(187, 110, 255, 0.3),
+    0 0 2px rgba(187, 110, 255, 0.25),
+    0 0 4px rgba(187, 110, 255, 0.2);
+  filter:
+    drop-shadow(0 0 1px rgba(187, 110, 255, 0.3))
+    drop-shadow(0 0 2px rgba(187, 110, 255, 0.25))
+    drop-shadow(0 0 4px rgba(187, 110, 255, 0.2));
+  animation: glowPurpleSoft 12s infinite alternate;
+  will-change: text-shadow, filter;
+}
+
+@keyframes glowPurpleSoft {
+  0% {
+    text-shadow:
+      0 0 1px rgba(187, 110, 255, 0.3),
+      0 0 2px rgba(187, 110, 255, 0.25),
+      0 0 4px rgba(187, 110, 255, 0.2);
+    filter:
+      drop-shadow(0 0 1px rgba(187, 110, 255, 0.3))
+      drop-shadow(0 0 2px rgba(187, 110, 255, 0.25))
+      drop-shadow(0 0 4px rgba(187, 110, 255, 0.2));
+  }
+  100% {
+    text-shadow:
+      0 0 2px rgba(217, 170, 255, 0.35),
+      0 0 4px rgba(217, 170, 255, 0.3),
+      0 0 6px rgba(217, 170, 255, 0.25);
+    filter:
+      drop-shadow(0 0 2px rgba(217, 170, 255, 0.35))
+      drop-shadow(0 0 4px rgba(217, 170, 255, 0.3))
+      drop-shadow(0 0 6px rgba(217, 170, 255, 0.25));
+  }
+}
+

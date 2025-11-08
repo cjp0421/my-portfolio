@@ -6,7 +6,10 @@ import { CAPABILITIES } from './capabilities_data';
 
 export function Capabilities() {
   return (
-    <Box component="section" id="Capabilities" sx={{ px: 3, py: 10 }}>
+    <Box component="section" 
+      id="Capabilities" 
+      sx={{ px: 3, py: 10 }}
+      >
       <Container maxWidth="lg">
         <Typography 
           variant="h2" 
@@ -30,7 +33,7 @@ export function Capabilities() {
                     height: '100%',
                     transition: 'border-color 0.3s',
                     '&:hover': {
-                      borderColor: 'primary.main',
+                      borderColor: '#000',
                     },
                   }}
                   variant="outlined"

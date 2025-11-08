@@ -1,5 +1,6 @@
 import { Box, Container, Typography, Card, CardContent, CardActions, Grid, Chip, Button, Stack } from '@mui/material';
 import { GitHub as GithubIcon, OpenInNew as ExternalLinkIcon } from '@mui/icons-material';
+import './Projects.css';
 
 const projects = [
   {
@@ -44,13 +45,18 @@ const projects = [
 
 export function Projects() {
   return (
-    <Box component="section" id="Projects" sx={{ px: 3, py: 10, bgcolor: 'rgba(248, 250, 252, 0.5)' }}>
+    <Box component="section" 
+      id="Projects" 
+      sx={{ px: 3, py: 10 }}
+      >
       <Container maxWidth="lg">
-        <Typography variant="h2" align="center" sx={{ mb: 2, color: 'text.primary' }}>
+        <Typography 
+          variant="h2" 
+          className="neon-purple" 
+          align="center" 
+          sx={{ mb: 6 }}
+          >
           Projects
-        </Typography>
-        <Typography variant="body1" align="center" color="text.secondary" sx={{ mb: 6, maxWidth: '800px', mx: 'auto' }}>
-          The proof section.
         </Typography>
         <Grid container spacing={3}>
           {projects.map((project) => (
@@ -76,8 +82,9 @@ export function Projects() {
                         key={tech}
                         label={tech}
                         size="small"
-                        variant="outlined"
-                        sx={{ mb: 1 }}
+                        variant="filled"
+                        className='neon-purple-soft'
+                        sx={{ mb: 1, backgroundColor: "#fff" }}
                       />
                     ))}
                   </Stack>
@@ -91,7 +98,11 @@ export function Projects() {
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      sx={{ flex: 1 }}
+                      sx={{ 
+                        flex: 1,
+                        backgroundColor: 'black',
+                        color: 'white'
+                      }}
                     >
                       GitHub
                     </Button>
@@ -104,7 +115,11 @@ export function Projects() {
                       href={project.demoUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      sx={{ flex: 1 }}
+                      sx={{ 
+                        flex: 1,
+                        backgroundColor: 'black',
+                        color: 'white'
+                      }}
                     >
                       Demo
                     </Button>
