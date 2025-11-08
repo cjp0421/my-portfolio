@@ -13,7 +13,11 @@ function App() {
       <header>
         {/*https://mui.com/material-ui/react-app-bar/#responsive-app-bar-with-drawer*/}
         <AppBar component="nav">
-          <Toolbar>
+          <Toolbar
+          sx={{
+            backgroundColor: '#000'
+          }}
+          >
             <IconButton
             color="inherit"
             aria-label="open drawer"

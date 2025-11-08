@@ -44,7 +44,7 @@ const projects = [
 
 export function Projects() {
   return (
-    <Box component="section" sx={{ px: 3, py: 10, bgcolor: 'rgba(248, 250, 252, 0.5)' }}>
+    <Box component="section" id="Projects" sx={{ px: 3, py: 10, bgcolor: 'rgba(248, 250, 252, 0.5)' }}>
       <Container maxWidth="lg">
         <Typography variant="h2" align="center" sx={{ mb: 2, color: 'text.primary' }}>
           Projects

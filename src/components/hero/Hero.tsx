@@ -5,6 +5,7 @@ export function Hero() {
   return (
     <Box
       component="section"
+      id="Home"
       sx={{
         display: 'flex',
         flexDirection: 'column',

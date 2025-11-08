@@ -3,7 +3,7 @@ import { GitHub as GithubIcon, LinkedIn as LinkedinIcon, Email as MailIcon } fro
 
 export function Contact() {
   return (
-    <Box component="section" sx={{ px: 3, py: 10 }}>
+    <Box component="section" id="Contact" sx={{ px: 3, py: 10 }}>
       <Container maxWidth="md">
         <Box sx={{ textAlign: 'center' }}>
           <Typography variant="h2" sx={{ mb: 2, color: 'text.primary' }}>
