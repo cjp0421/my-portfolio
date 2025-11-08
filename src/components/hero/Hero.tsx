@@ -21,7 +21,13 @@ export function Hero() {
           variant="h1"
           align="center"
           className="neon-text"
-          sx={{ mb: 3 }}
+          sx={{ 
+            mb: 3,
+            fontSize: {
+              xs: '4rem',
+              md: '6rem',
+            },
+           }}
         >
           Carol Pedersen
         </Typography>
