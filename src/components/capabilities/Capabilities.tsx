@@ -6,7 +6,7 @@ import { CAPABILITIES } from './capabilities_data';
 
 export function Capabilities() {
   return (
-    <Box component="section" sx={{ px: 3, py: 10 }}>
+    <Box component="section" id="Capabilities" sx={{ px: 3, py: 10 }}>
       <Container maxWidth="lg">
         <Typography 
           variant="h2" 
