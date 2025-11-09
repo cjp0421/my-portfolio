@@ -14,8 +14,9 @@ export function Projects() {
           variant="h2" 
           className="neon-purple"
           align="center" 
-          sx={{ mb: 6, 
-                        fontSize: {
+          sx={{ 
+            mb: 6, 
+            fontSize: {
               xs: '3rem',
               md: '6rem',
             }

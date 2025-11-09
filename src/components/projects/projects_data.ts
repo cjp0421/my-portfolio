@@ -9,12 +9,12 @@ export const PROJECTS = [
   {
     name: "Reading List",
     description: "This project uses React, Vite, Material UI, Go, PostgresSQL, and Docker to create an app that tracks the reading list of the user.",
-    stack: ["React", "Go", "SQL","Vite","Docker"],
+    stack: ["React", "Go", "SQL", "Vite", "Docker"],
     githubUrl: "https://github.com/cjp0421/readinglist",
   },
   {
-    name: "AI File Management System",
-    description: "Command line Python program that connects to Gemini's API. Core functionalities include file system interaction, code execution, and task management.",
+    name: "AI Agent for File and Task Automation",
+    description: "Command-line Python tool integrating Gemini’s API to interact with the file system, execute code, and manage tasks autonomously.",
     stack: ["Python", "Gemini API"],
     githubUrl: "https://github.com/cjp0421/aiAgent",
   },
