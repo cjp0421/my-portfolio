@@ -69,14 +69,29 @@ describe('AppBar navigation', () => {
 
     navItems.forEach((item) => {
       cy.get('[aria-label="mobile navigation"]').contains(item).should('be.visible')
-
     })
 
     cy.get('body').click('topRight');
 
     navItems.forEach((item) => {
       cy.get('[aria-label="mobile navigation"]').contains(item).should('not.be.visible')
-
     })
+  })
+  it('navigates to section and closes drawer when a mobile nav item is clicked', () => {
+    cy.viewport('iphone-6');
+    cy.visit('/');
+
+    cy.window().its('scrollY').should('eq', 0);
+
+    cy.get('[aria-label="mobile navigation"]').should('not.exist');
+    cy.get('button[aria-label="open drawer"]').click();
+    cy.get('[aria-label="mobile navigation"]').should('exist');
+
+    cy.get('[aria-label="mobile navigation"]').contains('Projects').click();
+
+    cy.url().should('include', '#Projects');
+    cy.location('hash').should('eq', '#Projects');
+    cy.window().its('scrollY').should('be.gt', 0);
+    cy.contains('h2', 'Projects').should('be.visible');
   })
 })
