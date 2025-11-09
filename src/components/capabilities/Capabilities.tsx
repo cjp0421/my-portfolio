@@ -8,14 +8,20 @@ export function Capabilities() {
   return (
     <Box component="section" 
       id="Capabilities" 
-      sx={{ px: 3, py: 10 }}
+      sx={{ px: 2, py: 10 }}
       >
       <Container maxWidth="lg">
         <Typography 
           variant="h2" 
           align="center" 
           className='neon-blue'
-          sx={{ mb: 6 }}
+          sx={{ 
+            mb: 6, 
+            fontSize: {
+              xs: '3rem',
+              md: '6rem',
+            }
+          }}
           >
           Capabilities
         </Typography>

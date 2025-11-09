@@ -7,14 +7,19 @@ export function Projects() {
   return (
     <Box component="section" 
       id="Projects" 
-      sx={{ px: 3, py: 10 }}
+      sx={{ px: 2, py: 10 }}
       >
       <Container maxWidth="lg">
         <Typography 
           variant="h2" 
           className="neon-purple"
           align="center" 
-          sx={{ mb: 6 }}
+          sx={{ mb: 6, 
+                        fontSize: {
+              xs: '3rem',
+              md: '6rem',
+            }
+          }}
           >
           Projects
         </Typography>
