@@ -31,7 +31,6 @@ export default function NavBar() {
 
   return (
     <header>
-      {/*https://mui.com/material-ui/react-app-bar/#responsive-app-bar-with-drawer*/}
       <AppBar component="nav">
         <Toolbar
           sx={{
