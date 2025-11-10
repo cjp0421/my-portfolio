@@ -19,7 +19,7 @@
 }
 
 .neon-purple-soft-filter-chip {
-  color: inherit;
+  /* color: inherit; */
   text-shadow:
     0 0 1px rgba(187, 110, 255, 0.3),
     0 0 2px rgba(187, 110, 255, 0.25),

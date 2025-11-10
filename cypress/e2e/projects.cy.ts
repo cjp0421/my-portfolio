@@ -73,5 +73,31 @@ describe('Projects', () => {
         })
         cy.contains('Click to filter projects')
             .should('not.exist')
+    });
+    it('visually inidcates which chip is active', () => {
+        scrollToProjectSection();
+
+        cy.get('#Projects').within(() => {
+            cy.contains('[role="button"]', 'React')
+                .should('have.css', 'background-color')
+                .and('eq', 'rgb(255, 255, 255)')
+
+            cy.contains('[role="button"]', 'React')
+                .should('have.css', 'color')
+                .and('eq', 'rgb(0, 0, 0)')
+
+            cy.contains('[role="button"]', 'React')
+                .click();
+
+            cy.contains('[role="button"]', 'React')
+                .should('have.css', 'background-color')
+                .and('eq', 'rgba(0, 0, 0, 0.2)')
+            cy.contains('[role="button"]', 'React')
+                .should('have.css', 'color')
+                .and('eq', 'rgb(255, 255, 255)')
+
+            cy.contains('[role="button"]', 'Python')
+                .should('have.css', 'background-color', 'rgb(255, 255, 255)');
+        });
     })
 })

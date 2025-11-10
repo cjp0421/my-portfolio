@@ -44,15 +44,15 @@ export function Projects() {
             rowGap: 1
           }}
         >
-          {filters.map(filter => (
-            <Tooltip title="Click to filter projects">
+          {filters.map((filter: string) => (
+            <Tooltip key={filter} title="Click to filter projects">
               <Chip
-                key={filter}
                 label={filter}
                 clickable
                 className='neon-purple-soft-filter-chip'
                 sx={{
-                  backgroundColor: "#fff"
+                  backgroundColor: filter === activeFilter ? "#000" : "#fff",
+                  color: filter === activeFilter ? "#fff" : "#000"
                 }}
                 onClick={() => handleChipClick(filter)}
                 aria-pressed={filter === activeFilter}
