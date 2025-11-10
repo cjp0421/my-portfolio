@@ -2,32 +2,60 @@ import { Box, Container, Typography, Card, CardContent, CardActions, Grid, Chip,
 import { GitHub as GithubIcon, OpenInNew as ExternalLinkIcon } from '@mui/icons-material';
 import { PROJECTS } from './projects_data';
 import './Projects.css';
+import { useState } from 'react';
 
 export function Projects() {
+  const filters = ['All', ...new Set(PROJECTS.flatMap(project => project.stack))];
+  const [activeFilter, setActiveFilter] = useState('All')
+
   return (
-    <Box component="section" 
-      id="Projects" 
+    <Box component="section"
+      id="Projects"
       sx={{ px: 2, py: 10 }}
-      >
+    >
       <Container maxWidth="lg">
-        <Typography 
-          variant="h2" 
+        <Typography
+          variant="h2"
           className="neon-purple"
-          align="center" 
-          sx={{ 
-            mb: 6, 
+          align="center"
+          sx={{
+            mb: 6,
             fontSize: {
               xs: '3rem',
               md: '6rem',
             }
           }}
-          >
+        >
           Projects
         </Typography>
+        <Stack
+          direction="row"
+          spacing={1}
+          sx={{
+            mb: 3,
+            flexWrap: 'wrap',
+            justifyContent: 'space-around',
+            rowGap: 1
+          }}
+        >
+          {filters.map(filter => (
+            <Chip
+              key={filter}
+              label={filter}
+              clickable
+              className='neon-purple-soft-filter-chip'
+              sx={{
+                backgroundColor: "#fff"
+              }}
+              aria-pressed={filter === activeFilter}
+            />
+          ))}
+        </Stack>
         <Grid container spacing={3}>
           {PROJECTS.map((project) => (
-            <Grid size={{xs: 12, md: 6, lg: 4}} key={project.name}>
+            <Grid size={{ xs: 12, md: 6, lg: 4 }} key={project.name}>
               <Card
+                component="article"
                 sx={{
                   height: '100%',
                   display: 'flex',
@@ -49,7 +77,7 @@ export function Projects() {
                         label={tech}
                         size="small"
                         variant="filled"
-                        className='neon-purple-soft'
+                        className='neon-purple-soft-filter-chip'
                         sx={{ mb: 1, backgroundColor: "#fff" }}
                       />
                     ))}
@@ -64,7 +92,7 @@ export function Projects() {
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      sx={{ 
+                      sx={{
                         flex: 1,
                         backgroundColor: 'black',
                         color: 'white'
@@ -81,7 +109,7 @@ export function Projects() {
                       href={project.demoUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      sx={{ 
+                      sx={{
                         flex: 1,
                         backgroundColor: 'black',
                         color: 'white'
