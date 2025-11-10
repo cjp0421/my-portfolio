@@ -53,5 +53,25 @@ describe('Projects', () => {
                 cy.wrap($card).should('contain.text', 'React');
             });
         })
+    });
+    it('shows a tooltip when hovering over a filter chip', () => {
+        scrollToProjectSection();
+
+        cy.get('#Projects').within(() => {
+            cy.contains('[role="button"]', 'React')
+                .trigger('mouseover');
+
+        })
+
+        cy.contains('Click to filter projects')
+            .should('be.visible');
+
+        cy.get('#Projects').within(() => {
+            cy.contains('[role="button"]', 'React')
+                .trigger('mouseout');
+
+        })
+        cy.contains('Click to filter projects')
+            .should('not.exist')
     })
 })

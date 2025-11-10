@@ -1,4 +1,4 @@
-import { Box, Container, Typography, Card, CardContent, CardActions, Grid, Chip, Button, Stack } from '@mui/material';
+import { Box, Container, Typography, Card, CardContent, CardActions, Grid, Chip, Button, Stack, Tooltip } from '@mui/material';
 import { GitHub as GithubIcon, OpenInNew as ExternalLinkIcon } from '@mui/icons-material';
 import { PROJECTS } from './projects_data';
 import './Projects.css';
@@ -45,17 +45,19 @@ export function Projects() {
           }}
         >
           {filters.map(filter => (
-            <Chip
-              key={filter}
-              label={filter}
-              clickable
-              className='neon-purple-soft-filter-chip'
-              sx={{
-                backgroundColor: "#fff"
-              }}
-              onClick={() => handleChipClick(filter)}
-              aria-pressed={filter === activeFilter}
-            />
+            <Tooltip title="Click to filter projects">
+              <Chip
+                key={filter}
+                label={filter}
+                clickable
+                className='neon-purple-soft-filter-chip'
+                sx={{
+                  backgroundColor: "#fff"
+                }}
+                onClick={() => handleChipClick(filter)}
+                aria-pressed={filter === activeFilter}
+              />
+            </Tooltip>
           ))}
         </Stack>
         <Grid container spacing={3}>
