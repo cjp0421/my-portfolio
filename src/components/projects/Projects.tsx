@@ -6,11 +6,13 @@ import { useState } from 'react';
 
 export function Projects() {
   const filters = ['All', ...new Set(PROJECTS.flatMap(project => project.stack))];
-  const [activeFilter, setActiveFilter] = useState('All')
+  const [activeFilter, setActiveFilter] = useState('All');
 
   const handleChipClick = (filter: string) => {
     setActiveFilter(filter)
   }
+
+  const filteredProjects = activeFilter === 'All' ? PROJECTS : PROJECTS.filter((project) => project.stack.includes(activeFilter))
 
   return (
     <Box component="section"
@@ -57,7 +59,7 @@ export function Projects() {
           ))}
         </Stack>
         <Grid container spacing={3}>
-          {PROJECTS.map((project) => (
+          {filteredProjects.map((project) => (
             <Grid size={{ xs: 12, md: 6, lg: 4 }} key={project.name}>
               <Card
                 component="article"

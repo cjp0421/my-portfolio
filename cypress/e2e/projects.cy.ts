@@ -37,4 +37,21 @@ describe('Projects', () => {
                 .should('have.attr', 'aria-pressed', 'false');
         })
     })
+    it('shows only projects that match the active filter chip', () => {
+        scrollToProjectSection();
+
+        cy.get('#Projects').within(() => {
+            cy.contains('[role="button"]', 'React')
+                .click();
+
+            cy.contains('[role="button"]', 'React')
+                .should('have.attr', 'aria-pressed', 'true');
+
+            cy.get('article').should('have.length.at.least', 1);
+
+            cy.get('article').each(($card) => {
+                cy.wrap($card).should('contain.text', 'React');
+            });
+        })
+    })
 })
