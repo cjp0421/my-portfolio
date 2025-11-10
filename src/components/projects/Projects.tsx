@@ -8,6 +8,10 @@ export function Projects() {
   const filters = ['All', ...new Set(PROJECTS.flatMap(project => project.stack))];
   const [activeFilter, setActiveFilter] = useState('All')
 
+  const handleChipClick = (filter: string) => {
+    setActiveFilter(filter)
+  }
+
   return (
     <Box component="section"
       id="Projects"
@@ -47,6 +51,7 @@ export function Projects() {
               sx={{
                 backgroundColor: "#fff"
               }}
+              onClick={() => handleChipClick(filter)}
               aria-pressed={filter === activeFilter}
             />
           ))}
