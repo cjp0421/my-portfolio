@@ -41,7 +41,7 @@ export const PROJECTS = [
     name: "Personal Portfolio Website",
     description: "Responsive, single-page portfolio built with Vite, React, TypeScript, and Material UI. Features smooth scrolling navigation, TDD-tested components with Cypress, and sections for capabilities, projects, and contact information.",
     stack: ["React", "TypeScript", "Vite", "MUI", "Cypress", "GitHub Actions"],
-    githubUrl: "https://github.com/cjp0421/portfolio2025",
-    demoUrl: "https://cjp0421-portfolio2025.surge.sh",
+    githubUrl: "https://github.com/cjp0421/my-portfolio",
+    demoUrl: "https://cjp0421.github.io/my-portfolio/",
   },
 ];
