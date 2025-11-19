@@ -44,4 +44,17 @@ export const PROJECTS = [
     githubUrl: "https://github.com/cjp0421/my-portfolio",
     demoUrl: "https://cjp0421.github.io/my-portfolio/",
   },
+  {
+    name: "CORS Proxy Hugo Documentation Site",
+    description: "A full technical documentation site built with Hugo and the TechDoc theme. Covers CORS, API Gateway, Lambda, environment variables, deployment workflows, testing, and a step-by-step tutorial for building a secure serverless proxy. Hosted with GitHub Pages.",
+    stack: ["Hugo", "Markdown", "Technical Writing", "AWS", "GitHub Pages"],
+    githubUrl: "https://github.com/cjp0421/cors-proxy-docs",
+    demoUrl: "https://cjp0421.github.io/cors-proxy-docs/",
+  },
+  {
+    name: "Pokédex CLI",
+    description: "Golang command-line application that accesses the Pokémon API. Supports browsing Pokémon, viewing details, and interacting with data via a terminal-based interface.",
+    stack: ["Go", "CLI", "PokéAPI"],
+    githubUrl: "https://github.com/cjp0421/pokedexcli",
+  },
 ];
