@@ -5,7 +5,9 @@ import './Projects.css';
 import { useState } from 'react';
 
 export function Projects() {
-  const filters = ['All', ...new Set(PROJECTS.flatMap(project => project.stack))];
+  const filters = ['All', ...[...new Set(PROJECTS.flatMap(project => project.stack))].sort((a, b) =>
+    a.toLowerCase().localeCompare(b.toLowerCase())
+  )];
   const [activeFilter, setActiveFilter] = useState('All');
 
   const handleChipClick = (filter: string) => {
@@ -35,6 +37,7 @@ export function Projects() {
           Projects
         </Typography>
         <Stack
+          id="filter-chips"
           direction="row"
           spacing={1}
           sx={{

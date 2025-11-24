@@ -100,4 +100,22 @@ describe('Projects', () => {
                 .should('have.css', 'background-color', 'rgb(255, 255, 255)');
         });
     })
+    it('displays the filter chips in case-insensitive, alphabetical order', () => {
+        scrollToProjectSection();
+        cy.get('#filter-chips').within(() => {
+
+            cy.findAllByRole('button', { name: /.+/i }).then(($chips) => {
+                const labels = [...$chips].map(chip => chip.innerText.trim());
+                const [first, ...rest] = labels;
+
+                expect(first).to.equal("All");
+
+                const sortedLabels = [...rest].slice().sort((a, b) =>
+                    a.toLowerCase().localeCompare(b.toLowerCase())
+                );
+
+                expect(rest).to.deep.equal(sortedLabels);
+            })
+        })
+    })
 })
