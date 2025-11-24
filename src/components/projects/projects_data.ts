@@ -2,20 +2,20 @@ export const PROJECTS = [
   {
     name: "Jamming Playlists",
     description: "This is a playlist web app (similar to Spotify) that uses Spotify's api. The intention of this project is to practice using React/TypeScript while developing a portfolio project.",
-    stack: ["React", "TypeScript"],
+    stack: ["React", "TypeScript", "APIs"],
     githubUrl: "https://github.com/cjp0421/jammming2024",
     demoUrl: "https://cjpsjammming2024.surge.sh/",
   },
   {
     name: "Reading List",
     description: "This project uses React, Vite, Material UI, Go, PostgresSQL, and Docker to create an app that tracks the reading list of the user.",
-    stack: ["React", "Go", "SQL", "Vite", "Docker"],
+    stack: ["React", "Go", "SQL", "Vite", "Docker", "APIs"],
     githubUrl: "https://github.com/cjp0421/readinglist",
   },
   {
     name: "AI Agent for File and Task Automation",
     description: "Command-line Python tool integrating Gemini’s API to interact with the file system, execute code, and manage tasks autonomously.",
-    stack: ["Python", "Gemini API"],
+    stack: ["Python", "AI", "APIs"],
     githubUrl: "https://github.com/cjp0421/aiAgent",
   },
   {
@@ -47,14 +47,14 @@ export const PROJECTS = [
   {
     name: "CORS Proxy Hugo Documentation Site",
     description: "A full technical documentation site built with Hugo and the TechDoc theme. Covers CORS, API Gateway, Lambda, environment variables, deployment workflows, testing, and a step-by-step tutorial for building a secure serverless proxy. Hosted with GitHub Pages.",
-    stack: ["Hugo", "Markdown", "Technical Writing", "AWS", "GitHub Pages"],
+    stack: ["Hugo", "Markdown", "Technical Writing", "AWS", "GitHub Actions", "Training"],
     githubUrl: "https://github.com/cjp0421/cors-proxy-docs",
     demoUrl: "https://cjp0421.github.io/cors-proxy-docs/",
   },
   {
     name: "Pokédex CLI",
     description: "Golang command-line application that accesses the Pokémon API. Supports browsing Pokémon, viewing details, and interacting with data via a terminal-based interface.",
-    stack: ["Go", "CLI", "PokéAPI"],
+    stack: ["Go", "CLI", "APIs"],
     githubUrl: "https://github.com/cjp0421/pokedexcli",
   },
 ];
