@@ -1,16 +1,23 @@
 {
   "extends": "../tsconfig.app.json",
   "compilerOptions": {
-    "composite": true, 
-    "types": ["cypress", "node", "mocha"],
+    "composite": true,
+    "types": [
+      "cypress",
+      "@testing-library/cypress"
+    ],
     "noEmit": true,
     "isolatedModules": false
   },
   "include": [
+    "../node_modules/@testing-library/cypress",
     "**/*.ts",
     "**/*.tsx",
     "**/*.js",
-    "**/*.jsx"
+    "**/*.jsx",
+    "support/e2e.d.ts"
   ],
-  "exclude": ["../node_modules"]
+  "exclude": [
+    "../node_modules"
+  ]
 }
