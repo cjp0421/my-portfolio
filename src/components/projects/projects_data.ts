@@ -57,4 +57,11 @@ export const PROJECTS = [
     stack: ["Go", "CLI", "APIs"],
     githubUrl: "https://github.com/cjp0421/pokedexcli",
   },
+  {
+    name: "Solar System Dashboard",
+    description: "React/TypeScript dashboard displaying solar system data using TanStack Query and React Router.",
+    stack: ["TypeScript", "React", "APIs", "Material UI", "Vite", "Cypress", "GitHub Actions"],
+    githubUrl: "https://github.com/cjp0421/solar-system-dashboard",
+    demoUrl: "https://cjp0421.github.io/solar-system-dashboard/"
+  },
 ];
